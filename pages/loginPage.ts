@@ -6,6 +6,8 @@ export class LoginPage {
                   readonly passwordInput: Locator
                   readonly submitButton: Locator
                   readonly logoutButton: Locator
+                  readonly successMessage: Locator
+                  readonly errorMessage: Locator
 
                   constructor(page: Page){
                                     this.page = page
@@ -13,17 +15,22 @@ export class LoginPage {
                                     this.passwordInput = page.locator('#password')
                                     this.submitButton = page.locator('#submit')
                                     this.logoutButton = page.getByText('Log out')
+                                    this.successMessage = page.locator('.post-title')
+                                    this.errorMessage = page.locator('#error')
                   }
-                  
+
                   async fillUserNameInput(value: string){
                                     await  this.userNameInput.fill(value)
                   }
+
                   async fillPasswordInput(value: string){
                                     await this.passwordInput.fill(value)
                   }
+
                   async clickSubmitButton(){
                                     await this.submitButton.click()
                   }
+                  
                   async clickLogoutButton(){
                                     await this.logoutButton.click()
                   }
