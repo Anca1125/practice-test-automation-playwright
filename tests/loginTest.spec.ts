@@ -1,5 +1,8 @@
 import {test, expect} from '@playwright/test'
+<<<<<<< Updated upstream
 import { allure } from 'allure-playwright'
+=======
+>>>>>>> Stashed changes
 import { NavigationPage } from '../pages/NavigationPage'
 import { PracticePage } from '../pages/PracticePage'
 import { LoginPage } from '../pages/loginPage'
