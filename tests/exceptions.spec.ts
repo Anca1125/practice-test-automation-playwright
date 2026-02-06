@@ -34,7 +34,7 @@ await allure.step('input field is active and user is able to edit', async() => {
 })
 
 await allure.step('save changes', async() => {
- await exceptionsPage.clickSaveButton()
+ await exceptionsPage.clickSaveButtonForRow(1)
 })
 
 await allure.step('the success message is dispalyed', async() => {
@@ -65,7 +65,7 @@ await allure.step('the user is able to type in row2', async() => {
 }) 
 
 await allure.step('the user is able to save row2',async() => {
- await exceptionsPage.clickSaveButton()
+ await exceptionsPage.clickSaveButtonForRow(2)
 })
 
 await allure.step('the success message for saving the new row is displayed', async() =>{

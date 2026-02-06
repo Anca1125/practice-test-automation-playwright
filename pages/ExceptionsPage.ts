@@ -16,7 +16,7 @@ export class ExceptionsPage {
                                     this.page = page
                                     this.editButton = page.locator('#edit_btn')
                                     this.addButton = page.locator('#add_btn')
-                                    this.saveButton = page.locator('#save_btn')
+                                    this.saveButton = page.getByRole('button', { name: 'Save' })
                                     this.removeButton = page.locator('#remove_btn')
                                     this.inputRow1 = page.locator('.input-field')
                                     this.inputRow2 = page.locator('#row2 input')
@@ -29,8 +29,11 @@ export class ExceptionsPage {
                   async clickAddButton(){
                                     await this.addButton.click()
                   }
-                  async clickSaveButton(){
-                                    await this.saveButton.click()
+                  async clickSaveButtonForRow(rowNumber: number){
+                                    await this.page
+                                    .locator(`#row${rowNumber}`)
+                                    .getByRole('button', { name: 'Save' })
+                                    .click()
                   }
                   async clickRemoveButton(){
                                     await this.removeButton.click()
