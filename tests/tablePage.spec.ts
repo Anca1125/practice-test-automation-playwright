@@ -1,6 +1,6 @@
 import {test, expect, Page} from '@playwright/test'
 import { allure } from 'allure-playwright'
-import { NavigationPage } from '../pages/navigationPage'
+import { NavigationPage } from '../pages/NavigationPage'
 import { PracticePage } from '../pages/PracticePage'
 import { TablePage } from '../pages/TablePage'
 
