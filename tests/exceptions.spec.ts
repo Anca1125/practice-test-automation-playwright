@@ -6,7 +6,7 @@ import {ExceptionsPage} from '../pages/ExceptionsPage'
 import { rowData } from '../fixtures/exceptionsData'
 
 let exceptionsPage: ExceptionsPage
-test.describe('exceptions',() => {
+test.describe('exceptions page',() => {
  test.beforeEach(async ({page}) => {
 
 const navigationPage = new NavigationPage(page)
