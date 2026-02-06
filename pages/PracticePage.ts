@@ -12,4 +12,16 @@ export class PracticePage {
     this.testTablePage = page.getByRole('link', { name: 'Test Table' })
     this.testExceptionsPage = page.getByRole('link', { name: 'Test Exceptions' })
   }
+
+  async goToLoginPage() {
+    await this.testLoginPage.click()
+  }
+
+  async goToTablePage() {
+    await this.testTablePage.click()
+  }
+
+  async goToExceptionsPage() {
+    await this.testExceptionsPage.click()
+  }
 }
