@@ -64,7 +64,7 @@ await allure.step('verify filtered levels are present in the table', async () =>
 
 test('test table - sort courses by language', async ({page}) => {
 await allure.step('sort by language', async () => {
- await tablePage.sortByLevel.selectOption({label:'language'})                 
+ await tablePage.sortByDropdown.selectOption({ label: 'Course Name' })               
 })
 await allure.step('verify table is still displayed aftre sorting', async () => { 
 
@@ -131,7 +131,7 @@ await allure.step('verify table is reset',  async() => {
 })
 })
 
-test('test table - verify links', async ({page}) => {
+test('test table - verify links opens new pages', async ({page}) => {
 
 let newPage: Page
 

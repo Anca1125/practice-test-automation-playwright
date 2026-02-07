@@ -19,6 +19,7 @@ export class TablePage{
                   readonly advancedCheckBox: Locator
 
                   readonly minEnrollments: Locator
+                  readonly sortByDropdown: Locator
                   readonly sortByLevel: Locator
                   readonly resetButton: Locator
 
@@ -46,10 +47,12 @@ export class TablePage{
                                     this.advancedCheckBox = page.getByLabel(' Advanced')
 
                                     this.minEnrollments = page.locator('#enrollDropdown')
-                                    this.sortByLevel = page.locator('#sortBy')
+                                    this.sortByDropdown = page.locator('#sortBy')
+                                    this.sortByLevel = page.getByRole('columnheader', { name: 'Level' })
                                     this.resetButton = page.locator('#resetFilters')
 
                                     //LINKS
                                     this.linkButton = page.getByRole('link', {name:'View'})
 }
+
 }
